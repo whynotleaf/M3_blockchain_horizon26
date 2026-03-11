@@ -17,6 +17,9 @@ blockchain-based settlement.
 
 ------------------------------------------------------------------------
 
+## Trading Dashboard
+![Trading Dashboard](readmeassets/dashboard.png)
+
 # Tech Stack
 
 The project is built as a full-stack system consisting of a frontend
@@ -71,6 +74,9 @@ transaction.
 
 ------------------------------------------------------------------------
 
+### Trade Interface
+![Trade](readmeassets/trade.png)
+
 # Data Pipeline
 
 The data flow begins when a user places a trade through the frontend
@@ -90,18 +96,9 @@ system state and sends the settlement result back to the frontend.
 
 ------------------------------------------------------------------------
 
-# Screenshots
 
-Screenshots of the project interface are stored in:
-
-    /readmeassets
-
-These include:
-
--   Trading dashboard\
--   Portfolio view\
--   Settlement tracker\
--   Regulator monitoring panel
+## Portfolio View
+![Portfolio](readmeassets/portfolio.png)
 
 ------------------------------------------------------------------------
 
