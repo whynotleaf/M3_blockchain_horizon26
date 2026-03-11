@@ -137,6 +137,110 @@ system state and sends the settlement result back to the frontend.
 
 ------------------------------------------------------------------------
 
+# Smart Contracts & System Design
+
+This project uses three different smart contracts that together handle the tokenization of assets and settlement logic.
+
+**1. Stock Token Contract**
+
+The first contract represents stocks as tokens on the blockchain.  
+Stocks cannot be divided into fractions in our system, so the token uses **0 decimals** and all values are stored as integers.
+
+The contract includes:
+- An **initial supply** of shares
+- A **mint function** that allows new stocks to be issued if required
+
+This contract essentially represents the supply and ownership of stocks on the blockchain.
+
+**2. INR Token Contract**
+
+The second contract represents **Indian Rupees (INR)** as a token on the blockchain.
+
+Since real currency values can include paise, this token uses **2 decimal places**, allowing values to be stored in paisa units.
+
+The contract includes:
+- A **mint function** to create new INR tokens
+- A **burn function** to remove tokens from circulation
+
+These functions simulate monetary regulation and help maintain stability of the INR token within the system.
+
+**3. Settlement Contract**
+
+The third contract manages the **initialisation and settlement of trades**.
+
+Two main functions are used:
+
+- **initialize()** — creates a pending transaction between a buyer and seller  
+- **settle()** — executes the trade when all required conditions are satisfied
+
+Before settlement, the contract checks that:
+- The **buyer has sufficient INR balance** to purchase the stocks
+- The **seller owns enough stock tokens** to fulfill the order
+
+If both conditions are met, the smart contract performs the transfer of tokens between the two parties.
+
+This process ensures **atomic Delivery vs Payment (DvP)** where both asset transfer and payment occur together.
+
+------------------------------------------------------------------------
+
+# Deployment
+
+All smart contracts are deployed to a **local Ethereum network** using **Hardhat**.
+
+Hardhat allows the contracts to run on a simulated blockchain environment for development and testing. The same deployment setup can also be configured to deploy contracts to:
+
+- Ethereum Testnets
+- Ethereum Mainnet
+- Other EVM-compatible networks
+
+------------------------------------------------------------------------
+
+# Future Deployment Approach
+
+If deployed on a production blockchain, the system would ideally use **low gas fee networks** such as:
+
+- Optimism
+- Arbitrum
+- Other Layer 2 Ethereum networks
+
+These networks provide faster transactions and significantly lower gas costs while remaining compatible with Ethereum smart contracts.
+
+------------------------------------------------------------------------
+
+# Market Simulation
+
+The stocks displayed on the platform are currently **not connected to real market data**.
+
+Instead, stock prices are **hardcoded and dynamically updated using `Math.random()`** to simulate real market fluctuations. This allows the system to demonstrate trading and settlement behaviour without relying on external market APIs.
+
+------------------------------------------------------------------------
+
+# Data Storage Design
+
+For simplicity and ease of development, the project stores most application data directly inside **JavaScript files**.
+
+This includes:
+- User accounts
+- Stock listings
+- Trade records
+
+A traditional database or JSON storage was not used to keep the project lightweight and focused on demonstrating the **blockchain settlement process**.
+
+In the current architecture:
+
+- **Blockchain is used for:**  
+  - Trade initialization  
+  - Atomic settlement
+
+- **JavaScript files store:**  
+  - User data  
+  - Stock information  
+  - Transaction history
+
+This design keeps blockchain usage limited to the **critical settlement layer**, while the rest of the system operates through the backend application.
+
+------------------------------------------------------------------------
+
 # Note
 
 This project is a prototype built for demonstration and learning
