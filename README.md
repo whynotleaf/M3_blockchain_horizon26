@@ -15,6 +15,43 @@ The main goal of the project was to understand how a full-stack
 application can integrate a trading interface, backend services, and
 blockchain-based settlement.
 
+## How to Run
+
+Install dependencies:
+
+```bash
+# root
+npm i
+
+# frontend
+cd frontend
+npm i
+
+# backend
+cd ../backend
+npm i
+```
+
+Start the local blockchain (run from root):
+
+```bash
+npx hardhat node
+```
+
+Start the backend (new terminal):
+
+```bash
+cd backend
+npm run start
+```
+
+Start the frontend (another terminal):
+
+```bash
+cd frontend
+npm run start
+```
+
 ------------------------------------------------------------------------
 
 ## Trading Dashboard
