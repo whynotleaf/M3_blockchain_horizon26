@@ -11,9 +11,7 @@ Delivery vs Payment (DvP)**. The system simulates a trading platform
 where tokenized shares and digital INR tokens are exchanged through
 smart contracts.
 
-The main goal of the project was to understand how a full-stack
-application can integrate a trading interface, backend services, and
-blockchain-based settlement.
+
 
 ## How to Run
 
