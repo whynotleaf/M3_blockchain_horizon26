@@ -1,178 +1,107 @@
-# SettleChain - Real-Time Blockchain Settlement for Indian Stock Markets
+# 🏦 SettleChain 2.0: Real-Time Atomic Settlement
 
-A full-stack prototype demonstrating how blockchain enables **atomic Delivery vs Payment (DvP)** settlement, replacing traditional T+1 with near-instant settlement (~5-10 seconds).
+> *Why wait 24 hours for your money when the code can do it in 8 seconds?*
 
----
+SettleChain is a blockchain-based *Delivery vs Payment (DvP)* system designed for the Indian stock market. It eliminates counterparty risk by ensuring that stock tokens and INR tokens swap hands *atomically* or not at all.
 
-## 🏗 Architecture
-
-```
-┌─────────────────────────────────────────────────────┐
-│                    React Frontend                    │
-│  Dashboard · Trade · Portfolio · Settlement Monitor  │
-└─────────────────────┬───────────────────────────────┘
-                      │ REST API
-┌─────────────────────▼───────────────────────────────┐
-│              Node.js + Express Backend               │
-│   Auth · Stocks · Orders · Settlement Engine · UPI   │
-└─────────────────────┬───────────────────────────────┘
-                      │ ethers.js
-┌─────────────────────▼───────────────────────────────┐
-│              Hardhat Local Blockchain                │
-│   INRToken (ERC20) · StockTokens · DvPSettlement     │
-└─────────────────────────────────────────────────────┘
-```
+This is the "Transformation" version (v2.0), evolved from a simple simulation into a functional proof-of-concept with *MetaMask integration, **on-chain settlement, and **persistent storage*.
 
 ---
 
-## System Components
+## ⚡ The Problem: T+1 is Too Slow
+Every day in India, over *₹6,00,000 Crores* of capital is locked in the clearing system. If you sell a stock today, you wait until tomorrow to use that cash. This "idle capital" is a massive inefficiency.
 
-| Component | Tech | Purpose |
-|-----------|------|---------|
-| Frontend  | React + Tailwind | Trading UI, portfolio, settlement tracker |
-| Backend   | Node.js + Express | API, order matching, settlement engine |
-| Smart Contracts | Solidity | Atomic DvP swap on Ethereum |
-| Blockchain | Hardhat | Local Ethereum node |
-| Payment | Mock UPI/RTGS | Indian payment rail simulation |
+## 🚀 The Solution: SettleChain
+By using EVM-compatible smart contracts, we achieve:
+1.  *Atomic Swaps*: No buyer gets shares without the seller getting paid.
+2.  *Instant Liquidity*: Capital is freed the moment the block is confirmed (~8s).
+3.  *Zero Risk*: No need for a central clearing house to guarantee the trade; the code is the guarantee.
+
+---
+
+## 🛠 Tech Stack
+-   *Blockchain*: Solidity, Hardhat, Ethers.js v6
+-   *Backend*: Node.js, Express, Persistent JSON Database
+-   *Frontend*: React, Tailwind CSS, Recharts
+-   *Wallet*: MetaMask (EVM)
 
 ---
 
-## Demo Users
+## 🏗 System Architecture
 
-| Name | Email | Password | Role |
-|------|-------|----------|------|
-| Arjun Sharma | arjun@demo.com | demo123 | Retail Trader |
-| Priya Patel | priya@demo.com | demo123 | Retail Trader (owns shares) |
-| ICICI Securities | icici@demo.com | demo123 | Institutional Trader |
-| SEBI Monitor | sebi@demo.com | demo123 | Regulator |
+mermaid
+graph TD
+    A[MetaMask Wallet] -->|Sign Tx| B(React Frontend)
+    B -->|API| C(Node.js Backend)
+    C -->|Ethers.js| D[Hardhat Local Node]
+    D -->|DvP Swap| E[Smart Contracts]
+    C -->|Persistent IO| F[(db.json)]
+    style E fill:#22c55e,stroke:#fff,color:#000
 
-## Quick Start Guide
-
-### Prerequisites
-- Node.js v18+
-- npm v9+
-
-### Setup Instructions
-
-1. **Install root dependencies**
-```bash
-cd settlement-system
-npm install
-```
-
-2. **Install backend dependencies**
-```bash
-cd backend
-npm install
-cd ..
-```
-
-3. **Install frontend dependencies**
-```bash
-cd frontend
-npm install
-cd ..
-```
-
-4. **Start local blockchain**
-In your first terminal, start the Hardhat node:
-```bash
-npx hardhat node
-```
-This will generate test accounts with private keys. Keep this terminal running.
-
-5. **Deploy smart contracts**
-Open a second terminal and run the deployment script:
-```bash
-npm run deploy
-```
-This deploys the INR token, Stock tokens, and the Settlement contract, then seeds the test users.
-
-6. **Start backend**
-In the same second terminal, start the backend server:
-```bash
-cd backend
-npm start
-```
-The backend will run on http://localhost:4000.
-
-7. **Start frontend**
-Open a third terminal and start the React app:
-```bash
-cd frontend
-npm start
-```
-The frontend will run on http://localhost:3000.
-
-## Demo Walkthrough
-
-### Trading Flow
-1. Login as Arjun Sharma (retail trader).
-2. Navigate to Trade and select RELIANCE.
-3. Set the quantity and choose UPI as the payment method.
-4. Click Buy and watch the real-time settlement tracker.
-5. Settlement completes in approximately 5 to 10 seconds.
-
-### Sell Flow
-1. Login as Priya Patel.
-2. Navigate to Trade, select RELIANCE, and choose to Sell.
-3. Watch the atomic DvP settlement process execute.
-
-### Regulator View
-1. Login as SEBI Monitor.
-2. View all trades happening in real-time.
-3. Flag suspicious trades with specific reasoning and monitor settlement times across the platform.
-
-## Smart Contract Details: Atomic DvP
-
-The core innovation is the atomic swap functionality. If either the payment transfer or the stock delivery fails, the entire transaction reverts. This guarantees:
-- The buyer receives shares if and only if the seller receives payment.
-- Zero counterparty risk.
-- No partial settlements.
-- An immutable audit trail on the blockchain.
-
-## Key Features
-
-- **Real-Time Settlement Tracker**: Monitor live progress through various stages like Payment Verification, Share Ownership Verification, Blockchain Transaction Broadcast, Atomic DvP Swap Execution, and Block Confirmation.
-- **Settlement Comparison**: Contrast the traditional T+1 settlement with our near-instant process.
-- **Regulator Dashboard**: Specialized tools for administrators to monitor trades, audit settlement trails, and view blockchain transaction hashes.
-
-## Project Structure
-
-```
-settlement-system/
-├── contracts/
-│   └── DvPSettlement.sol        # Solidity: DvP, Stock, and INR logic
-├── scripts/
-│   └── deploy.js                # Deployment script
-├── backend/
-│   ├── server.js                # Express entry point
-│   ├── models/store.js          # In-memory JavaScript data store
-│   ├── routes/
-│   │   ├── auth.js              # Authentication
-│   │   ├── stocks.js            # Stock data
-│   │   ├── trades.js            # Order placement and settlement
-│   │   ├── portfolio.js         # Portfolio analytics
-│   │   └── regulator.js        # Regulator monitoring
-│   └── services/
-│       ├── payment.js           # Payment simulation
-│       └── settlement.js        # Settlement engine
-├── frontend/
-│   └── src/
-│       ├── pages/               # React pages
-│       ├── components/          # UI components
-│       ├── context/             # State management
-│       └── utils/               # Helpers
-├── database/
-│   └── deployment.json          # Contract addresses
-└── README.md
-```
-
-## Troubleshooting
-
-- **Backend cannot connect to blockchain**: Ensure the Hardhat node is running in the first terminal and try running the deployment script again.
-- **Network Error on frontend**: Verify the backend is running on port 4000 and check the proxy settings in the frontend package.json.
-- **Settlement stuck at Initiating**: Refresh the page or check the backend console for any detailed error messages.
 
 ---
-Built for demonstration purposes. Not for production use.
+
+## 🚦 Quick Start Guide
+
+### 1. Prerequisites
+-   [MetaMask Extension](https://metamask.io/) installed in your browser.
+-   Node.js v18+ installed.
+
+### 2. Setup & Installation
+bash
+# Clone the repository
+git clone https://github.com/your-repo/settlechain
+cd SettleChain
+
+# Install all dependencies
+npm install && cd backend && npm install && cd ../frontend && npm install && cd ..
+
+
+### 3. Environment Configuration
+Create a .env file in the root directory (and one in frontend/.env - see walkthrough) with these variables:
+env
+# Backend .env
+PORT=4000
+RPC_URL=http://127.0.0.1:8545
+CHAIN_ID=31337
+DEPLOYER_PRIVATE_KEY=0x... (from Hardhat node)
+SEBI_MONITOR_ADDRESS=0x... (the address you want to be Regulator)
+
+
+### 4. Running the System
+1.  *Start Local Node*: npx hardhat node
+2.  *Deploy Contracts*: npm run deploy (copies ABIs and addresses to frontend/backend)
+3.  *Start Backend*: cd backend && node server.js
+4.  *Start Frontend*: cd frontend && npm start
+
+---
+
+## 💎 v2.0 Key Features
+
+### 🔑 Wallet = Identity
+Forget email/password. Just connect your MetaMask. Your wallet address is your account. The system automatically detects if you are the *SEBI Regulator* based on your address.
+
+### 🚰 On-Chain INR Faucet
+Need test funds? Use our faucet. We've integrated a simulated *UPI/RTGS payment gateway*. Complete a virtual UPI payment, and the backend mints real INR tokens to your wallet on-chain.
+
+### 🏎 The Settlement Race
+Our dashboard doesn't just show numbers; it shows a competition. Witness the "Settlement Race" where we compare traditional T+1 (24 hours) against SettleChain (~8 seconds) in real-time.
+
+### 🛡 Regulator Oversight (AML)
+The SEBI Monitor dashboard includes *deterministic AML risk scoring*. It flags unusual volumes, layering patterns, and suspicious "round-number" transfers automatically for human review.
+
+### 💾 Persistent Memory
+Unlike v1.0, SettleChain now uses a persistent JSON database (db.json). Your trade history, portfolio state, and risk flags survive even if you restart the server.
+
+---
+
+## 📝 Smart Contract Logic: Atomic DvP
+The DvPSettlement.sol contract is the hearts and brains of the system. It uses a *Three-Step Atomic Process*:
+1.  *Approval*: Buyer approves INR; Seller approves Shares.
+2.  *Initiation*: Backend validates the trade intent.
+3.  *Settlement: One single transaction executes transferFrom() for both assets. If either fails, the whole trade reverts. **No half-trades, ever.*
+
+---
+
+Built with 💚 for the future of Indian Finance.
+Disclaimer: This is a prototype and not intended for production financial use.
