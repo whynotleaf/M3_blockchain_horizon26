@@ -6,7 +6,7 @@ import WalletButton from "./WalletButton";
 const NAV = [
   { id: "dashboard",  icon: "⊞", label: "Dashboard" },
   { id: "trade",      icon: "⚡", label: "Trade" },
-  { id: "portfolio",  icon: "◎", label: "Portfolio" },
+  // { id: "portfolio",  icon: "◎", label: "Portfolio" },
   { id: "history",    icon: "≡", label: "History" },
   { id: "settlement", icon: "⛓", label: "Settlement" },
 ];

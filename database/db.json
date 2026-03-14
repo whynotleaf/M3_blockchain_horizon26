@@ -117,6 +117,25 @@
       "settlementTimeMs": 44409,
       "blockNumber": 10442328,
       "settlementTimeSec": 24
+    },
+    {
+      "id": "ce21ef3a-e843-4c56-b92f-3650ff75680c",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "RELIANCE",
+      "side": "BUY",
+      "quantity": 1,
+      "price": 2546.4,
+      "totalAmount": 2546.4,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T01:52:29.486Z",
+      "settledAt": "2026-03-14T01:53:02.128Z",
+      "txHash": "0x87bbdb9edd7dbc52faf30573ce082516d4e486b5c2c76f2d436b65e6b4ad4905",
+      "initTxHash": "0xb980606a746f6843e980299f6f6a057725f54b648aa89577fe15d02e181599b4",
+      "settleTxHash": "0x87bbdb9edd7dbc52faf30573ce082516d4e486b5c2c76f2d436b65e6b4ad4905",
+      "settlementId": "SET_1773453149488_9WT36O",
+      "settlementTimeMs": 32632,
+      "blockNumber": 10442527,
+      "settlementTimeSec": 12
     }
   ],
   "settlements": [
@@ -437,6 +456,70 @@
       "txHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
       "initTxHash": "0x6b41b3c15656dade0ed886fb5e52b4e95004943893d82cc6df8979366f99338a",
       "settleTxHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
+      "flagged": false,
+      "flagReason": null
+    },
+    {
+      "id": "SET_1773453149488_9WT36O",
+      "tradeId": "ce21ef3a-e843-4c56-b92f-3650ff75680c",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T01:52:29.498Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for BUY order",
+          "ts": "2026-03-14T01:52:29.500Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T01:52:29.501Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T01:52:39.147Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T01:52:39.147Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0xb980606a746f6843... — executing atomic DvP swap",
+          "ts": "2026-03-14T01:52:51.495Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T01:53:01.656Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 32.6s — Block #10442527",
+          "ts": "2026-03-14T01:53:02.120Z"
+        }
+      ],
+      "startTime": "2026-03-14T01:52:29.488Z",
+      "endTime": "2026-03-14T01:53:02.120Z",
+      "durationMs": 32632,
+      "blockNumber": 10442527,
+      "txHash": "0x87bbdb9edd7dbc52faf30573ce082516d4e486b5c2c76f2d436b65e6b4ad4905",
+      "initTxHash": "0xb980606a746f6843e980299f6f6a057725f54b648aa89577fe15d02e181599b4",
+      "settleTxHash": "0x87bbdb9edd7dbc52faf30573ce082516d4e486b5c2c76f2d436b65e6b4ad4905",
       "flagged": false,
       "flagReason": null
     }

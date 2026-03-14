@@ -223,7 +223,7 @@ export default function DashboardPage({ onNavigate }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Portfolio Holdings */}
-        <div className="card p-4">
+        {/* <div className="card p-4">
           <h3 className="font-display font-semibold text-white mb-3">My Holdings</h3>
           {portfolio?.holdings?.length ? (
             <div className="space-y-2">
@@ -262,7 +262,7 @@ export default function DashboardPage({ onNavigate }) {
             <span className="text-gray-500">On-Chain INR Balance</span>
             <span className="font-medium text-white">{inrBalance != null ? fmtINR(inrBalance) : "..."}</span>
           </div>
-        </div>
+        </div> */}
 
         {/* My On-Chain Activity */}
         <div className="card p-4">
