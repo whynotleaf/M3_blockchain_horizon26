@@ -1,0 +1,33 @@
+{
+  "network": "Hardhat Local",
+  "chainId": 11155111,
+  "explorerUrl": "",
+  "deployedAt": "2026-03-13T22:46:34.032Z",
+  "deployer": "0xe156e67D57545bd2fCF9E498678b20D96bDC844C",
+  "contracts": {
+    "INRToken": "0xd2698DD639D2A30ef02De2126844456fB08CAAE1",
+    "DvPSettlement": "0x9fBDF5405Ed6C14dD3fACe8a19cfc71fcE9e80bB",
+    "stocks": {
+      "RELIANCE": {
+        "address": "0x87421977930dDf60C13A9620d762d1842a540Cd9",
+        "name": "Reliance Industries"
+      },
+      "TCS": {
+        "address": "0x05Ed752a6484d30E10Fc5FAa657ce9b05b0286a7",
+        "name": "Tata Consultancy"
+      },
+      "HDFCBANK": {
+        "address": "0x355a8fDdb2e372272e49F4A96f9F6F79Fb7E5b26",
+        "name": "HDFC Bank"
+      },
+      "INFY": {
+        "address": "0xe156e67D57545bd2fCF9E498678b20D96bDC844C",
+        "name": "Infosys"
+      },
+      "ICICIBANK": {
+        "address": "0xEc3bd61021A10ADf7aab81Fa665214295D44E5b4",
+        "name": "ICICI Bank"
+      }
+    }
+  }
+}

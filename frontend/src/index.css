@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #080c14;
+    color: #e5e7eb;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: #111827; }
+  ::-webkit-scrollbar-thumb { background: #374151; border-radius: 2px; }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl;
+  }
+  .card-hover {
+    @apply card transition-all duration-200 hover:border-gray-700 hover:bg-gray-800/80;
+  }
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-400 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-150 active:scale-95;
+  }
+  .btn-danger {
+    @apply bg-red-500 hover:bg-red-400 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-150 active:scale-95;
+  }
+  .btn-ghost {
+    @apply bg-gray-800 hover:bg-gray-700 text-gray-300 font-medium px-4 py-2 rounded-lg transition-all duration-150;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-green  { @apply badge bg-green-500/15 text-green-400; }
+  .badge-red    { @apply badge bg-red-500/15 text-red-400; }
+  .badge-yellow { @apply badge bg-yellow-500/15 text-yellow-400; }
+  .badge-blue   { @apply badge bg-blue-500/15 text-blue-400; }
+  .badge-gray   { @apply badge bg-gray-500/15 text-gray-400; }
+
+  .stat-label { @apply text-xs text-gray-500 uppercase tracking-wider; }
+  .stat-value { @apply text-2xl font-display font-bold text-white; }
+
+  .input-field {
+    @apply w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white text-sm 
+           placeholder-gray-500 focus:outline-none focus:border-green-500 transition-colors;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-400
+           hover:text-white hover:bg-gray-800 transition-all;
+  }
+  .nav-link.active {
+    @apply text-white bg-gray-800 border border-gray-700;
+  }
+}
+
+/* Settlement progress animation */
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.animate-pulse-green { animation: pulse-green 1.5s ease-in-out infinite; }
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+  border-radius: 4px;
+}
+
+/* Price tick animation */
+@keyframes tickUp   { from { color: #4ade80; } to { color: inherit; } }
+@keyframes tickDown { from { color: #f87171; } to { color: inherit; } }
+.tick-up   { animation: tickUp   0.6s ease; }
+.tick-down { animation: tickDown 0.6s ease; }
+
+/* Blockchain tx hash font */
+.tx-hash { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
+
+/* Glow effects */
+.glow-green { box-shadow: 0 0 20px rgba(34,197,94,0.15); }
+.glow-red   { box-shadow: 0 0 20px rgba(239,68,68,0.15);  }

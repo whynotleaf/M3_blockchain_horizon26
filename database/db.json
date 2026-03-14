@@ -1,0 +1,445 @@
+{
+  "users": {
+    "0xd6760ee5e239f387abd70d31f35182bc3ced88d6": {
+      "address": "0xd6760ee5e239f387abd70d31f35182bc3ced88d6",
+      "role": "retail",
+      "portfolio": {},
+      "txHistory": [],
+      "joinedAt": "2026-03-13T21:25:47.757Z"
+    },
+    "0xd45ef15d2e942c9676220006ec3ee4ed7a9f32d1": {
+      "address": "0xd45ef15d2e942c9676220006ec3ee4ed7a9f32d1",
+      "role": "retail",
+      "portfolio": {},
+      "txHistory": [],
+      "joinedAt": "2026-03-13T22:01:53.129Z"
+    },
+    "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2": {
+      "address": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "role": "retail",
+      "portfolio": {},
+      "txHistory": [],
+      "joinedAt": "2026-03-14T00:47:25.354Z"
+    }
+  },
+  "trades": [
+    {
+      "id": "67f5587f-9b27-42b0-b549-c7ea8b21cfb4",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "RELIANCE",
+      "side": "BUY",
+      "quantity": 1,
+      "price": 2968.69,
+      "totalAmount": 2968.69,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T00:56:41.216Z",
+      "settledAt": "2026-03-14T00:57:15.166Z",
+      "txHash": "0xf067788038bc17c7a5dab47cb6c7591a0aab2521d031d4f592f7ad96925c74bf",
+      "initTxHash": "0x228934d08c6e13fe09507e199485806886f98686431fc32db7f8fb89197e54b4",
+      "settleTxHash": "0xf067788038bc17c7a5dab47cb6c7591a0aab2521d031d4f592f7ad96925c74bf",
+      "settlementId": "SET_1773449801218_LKECCM",
+      "settlementTimeMs": 33947,
+      "blockNumber": 10442283,
+      "settlementTimeSec": 12
+    },
+    {
+      "id": "953cf301-bb15-433e-9343-cb277600f055",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "HDFCBANK",
+      "side": "BUY",
+      "quantity": 4,
+      "price": 2077.01,
+      "totalAmount": 8308.04,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T01:00:07.536Z",
+      "settledAt": "2026-03-14T01:00:43.730Z",
+      "txHash": "0x5b8bcd8c832353251cc63de6fec365e6bb1ec36055e96a3457b096f0e1291f50",
+      "initTxHash": "0x4efcf61ed367977506696a7026a2c0aa786bd40e3bfc29f2736c7f98fdc9cb75",
+      "settleTxHash": "0x5b8bcd8c832353251cc63de6fec365e6bb1ec36055e96a3457b096f0e1291f50",
+      "settlementId": "SET_1773450007538_YN1UIK",
+      "settlementTimeMs": 36186,
+      "blockNumber": 10442298,
+      "settlementTimeSec": 12
+    },
+    {
+      "id": "6db025a6-02c0-43b3-a01c-80a301f47d65",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "RELIANCE",
+      "side": "SELL",
+      "quantity": 5,
+      "price": 2512.9,
+      "totalAmount": 12564.5,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T01:03:07.025Z",
+      "settledAt": "2026-03-14T01:03:50.657Z",
+      "txHash": "0x08fa9633da05d813edeb36d4ea8a7589e615bd37771ccecd4b7b7cc680c3330d",
+      "initTxHash": "0x2de5af503923b7cca1c4f15296ee50430fd90aa7b9b410377a82736557917831",
+      "settleTxHash": "0x08fa9633da05d813edeb36d4ea8a7589e615bd37771ccecd4b7b7cc680c3330d",
+      "settlementId": "SET_1773450187026_Q49QI2",
+      "settlementTimeMs": 43625,
+      "blockNumber": 10442312,
+      "settlementTimeSec": 12
+    },
+    {
+      "id": "014a9696-41b5-4c45-b16d-64d71c51c0d1",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "RELIANCE",
+      "side": "BUY",
+      "quantity": 4,
+      "price": 2514.2,
+      "totalAmount": 10056.8,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T01:05:27.942Z",
+      "settledAt": "2026-03-14T01:06:04.647Z",
+      "txHash": "0x348480622683fae29cd408d3c7ecd59eedb1477b2b0633ef83b56388f30a4abc",
+      "initTxHash": "0x8246322b6575a38ad342e42b0bc2be51f2e5c9667d004c8249fcb23f0517c392",
+      "settleTxHash": "0x348480622683fae29cd408d3c7ecd59eedb1477b2b0633ef83b56388f30a4abc",
+      "settlementId": "SET_1773450327942_OPZBYL",
+      "settlementTimeMs": 36698,
+      "blockNumber": 10442321,
+      "settlementTimeSec": 12
+    },
+    {
+      "id": "dad24718-99ba-437b-a6ac-15352919cc08",
+      "userAddress": "0xf60905ad49deecfa567bc93e57948a0ba05b4ef2",
+      "symbol": "RELIANCE",
+      "side": "BUY",
+      "quantity": 28,
+      "price": 2407.39,
+      "totalAmount": 67406.92,
+      "status": "SETTLED",
+      "createdAt": "2026-03-14T01:07:07.027Z",
+      "settledAt": "2026-03-14T01:07:51.444Z",
+      "txHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
+      "initTxHash": "0x6b41b3c15656dade0ed886fb5e52b4e95004943893d82cc6df8979366f99338a",
+      "settleTxHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
+      "settlementId": "SET_1773450427029_T7M1VC",
+      "settlementTimeMs": 44409,
+      "blockNumber": 10442328,
+      "settlementTimeSec": 24
+    }
+  ],
+  "settlements": [
+    {
+      "id": "SET_1773449801218_LKECCM",
+      "tradeId": "67f5587f-9b27-42b0-b549-c7ea8b21cfb4",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T00:56:41.232Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for BUY order",
+          "ts": "2026-03-14T00:56:41.232Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T00:56:41.233Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T00:56:49.746Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T00:56:49.747Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0x228934d08c6e13fe... — executing atomic DvP swap",
+          "ts": "2026-03-14T00:57:03.707Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T00:57:14.141Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 33.9s — Block #10442283",
+          "ts": "2026-03-14T00:57:15.165Z"
+        }
+      ],
+      "startTime": "2026-03-14T00:56:41.218Z",
+      "endTime": "2026-03-14T00:57:15.165Z",
+      "durationMs": 33947,
+      "blockNumber": 10442283,
+      "txHash": "0xf067788038bc17c7a5dab47cb6c7591a0aab2521d031d4f592f7ad96925c74bf",
+      "initTxHash": "0x228934d08c6e13fe09507e199485806886f98686431fc32db7f8fb89197e54b4",
+      "settleTxHash": "0xf067788038bc17c7a5dab47cb6c7591a0aab2521d031d4f592f7ad96925c74bf",
+      "flagged": false,
+      "flagReason": null
+    },
+    {
+      "id": "SET_1773450007538_YN1UIK",
+      "tradeId": "953cf301-bb15-433e-9343-cb277600f055",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T01:00:07.550Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for BUY order",
+          "ts": "2026-03-14T01:00:07.551Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T01:00:07.552Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T01:00:16.181Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T01:00:16.182Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0x4efcf61ed3679775... — executing atomic DvP swap",
+          "ts": "2026-03-14T01:00:29.441Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T01:00:42.702Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 36.2s — Block #10442298",
+          "ts": "2026-03-14T01:00:43.724Z"
+        }
+      ],
+      "startTime": "2026-03-14T01:00:07.538Z",
+      "endTime": "2026-03-14T01:00:43.724Z",
+      "durationMs": 36186,
+      "blockNumber": 10442298,
+      "txHash": "0x5b8bcd8c832353251cc63de6fec365e6bb1ec36055e96a3457b096f0e1291f50",
+      "initTxHash": "0x4efcf61ed367977506696a7026a2c0aa786bd40e3bfc29f2736c7f98fdc9cb75",
+      "settleTxHash": "0x5b8bcd8c832353251cc63de6fec365e6bb1ec36055e96a3457b096f0e1291f50",
+      "flagged": false,
+      "flagReason": null
+    },
+    {
+      "id": "SET_1773450187026_Q49QI2",
+      "tradeId": "6db025a6-02c0-43b3-a01c-80a301f47d65",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T01:03:07.037Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for SELL order",
+          "ts": "2026-03-14T01:03:07.038Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T01:03:07.039Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T01:03:16.182Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T01:03:16.183Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0x2de5af503923b7cc... — executing atomic DvP swap",
+          "ts": "2026-03-14T01:03:42.191Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T01:03:50.250Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 43.6s — Block #10442312",
+          "ts": "2026-03-14T01:03:50.651Z"
+        }
+      ],
+      "startTime": "2026-03-14T01:03:07.026Z",
+      "endTime": "2026-03-14T01:03:50.651Z",
+      "durationMs": 43625,
+      "blockNumber": 10442312,
+      "txHash": "0x08fa9633da05d813edeb36d4ea8a7589e615bd37771ccecd4b7b7cc680c3330d",
+      "initTxHash": "0x2de5af503923b7cca1c4f15296ee50430fd90aa7b9b410377a82736557917831",
+      "settleTxHash": "0x08fa9633da05d813edeb36d4ea8a7589e615bd37771ccecd4b7b7cc680c3330d",
+      "flagged": false,
+      "flagReason": null
+    },
+    {
+      "id": "SET_1773450327942_OPZBYL",
+      "tradeId": "014a9696-41b5-4c45-b16d-64d71c51c0d1",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T01:05:27.955Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for BUY order",
+          "ts": "2026-03-14T01:05:27.956Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T01:05:27.957Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T01:05:41.683Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T01:05:41.684Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0x8246322b6575a38a... — executing atomic DvP swap",
+          "ts": "2026-03-14T01:05:49.817Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T01:06:04.177Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 36.7s — Block #10442321",
+          "ts": "2026-03-14T01:06:04.640Z"
+        }
+      ],
+      "startTime": "2026-03-14T01:05:27.942Z",
+      "endTime": "2026-03-14T01:06:04.640Z",
+      "durationMs": 36698,
+      "blockNumber": 10442321,
+      "txHash": "0x348480622683fae29cd408d3c7ecd59eedb1477b2b0633ef83b56388f30a4abc",
+      "initTxHash": "0x8246322b6575a38ad342e42b0bc2be51f2e5c9667d004c8249fcb23f0517c392",
+      "settleTxHash": "0x348480622683fae29cd408d3c7ecd59eedb1477b2b0633ef83b56388f30a4abc",
+      "flagged": false,
+      "flagReason": null
+    },
+    {
+      "id": "SET_1773450427029_T7M1VC",
+      "tradeId": "dad24718-99ba-437b-a6ac-15352919cc08",
+      "status": "SETTLED",
+      "steps": [
+        {
+          "step": "VERIFYING_PAYMENT",
+          "status": "IN_PROGRESS",
+          "detail": "Verifying on-chain balances...",
+          "ts": "2026-03-14T01:07:07.040Z"
+        },
+        {
+          "step": "PAYMENT_VERIFIED",
+          "status": "DONE",
+          "detail": "Balances verified for BUY order",
+          "ts": "2026-03-14T01:07:07.042Z"
+        },
+        {
+          "step": "VERIFYING_SHARES",
+          "status": "IN_PROGRESS",
+          "detail": "Deployer setting approvals...",
+          "ts": "2026-03-14T01:07:07.042Z"
+        },
+        {
+          "step": "SHARES_VERIFIED",
+          "status": "DONE",
+          "detail": "Deployer approvals set on-chain",
+          "ts": "2026-03-14T01:07:16.179Z"
+        },
+        {
+          "step": "BLOCKCHAIN_INIT",
+          "status": "IN_PROGRESS",
+          "detail": "Broadcasting initiateTrade to blockchain...",
+          "ts": "2026-03-14T01:07:16.181Z"
+        },
+        {
+          "step": "ATOMIC_SWAP",
+          "status": "IN_PROGRESS",
+          "detail": "Tx 0x6b41b3c15656dade... — executing atomic DvP swap",
+          "ts": "2026-03-14T01:07:29.441Z"
+        },
+        {
+          "step": "CONFIRMING",
+          "status": "IN_PROGRESS",
+          "detail": "Waiting for block confirmations...",
+          "ts": "2026-03-14T01:07:50.955Z"
+        },
+        {
+          "step": "SETTLED",
+          "status": "DONE",
+          "detail": "✅ Settlement complete in 44.4s — Block #10442328",
+          "ts": "2026-03-14T01:07:51.438Z"
+        }
+      ],
+      "startTime": "2026-03-14T01:07:07.029Z",
+      "endTime": "2026-03-14T01:07:51.438Z",
+      "durationMs": 44409,
+      "blockNumber": 10442328,
+      "txHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
+      "initTxHash": "0x6b41b3c15656dade0ed886fb5e52b4e95004943893d82cc6df8979366f99338a",
+      "settleTxHash": "0x841b4d0dac69861a168ea1f5fcd42c16c2f4aeed6dc88a5730f83ed46f7e7da9",
+      "flagged": false,
+      "flagReason": null
+    }
+  ],
+  "orders": []
+}
